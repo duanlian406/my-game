@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <div class="btn-group" role="group">
+      <button (click)="start()" class="btn btn-warning" *ngIf="!isStart">开始游戏</button>
+      <button (click)="pause()" class="btn btn-info" [disabled]="isPause" *ngIf="isStart">暂停</button>
+      <button (click)="continue()" class="btn btn-success" [disabled]="!isPause" *ngIf="isStart">继续</button>
+    </div>
+  </div>
+  <div class="panel-body" style="text-align:center;">
+    <canvas #canvas></canvas>
+  </div>
+  <div class="panel-footer">
+    {{direction$|async|json}}
+  </div>
+</div>
