@@ -7,6 +7,7 @@ import { PageNotFoundComponentComponent } from '../page-not-found-component/page
 const routes: Routes = [
   { path: 'home', component: HomeComponentComponent },
   { path: 'snake', loadChildren: '../snake/snake.module#SnakeModule' },
+  { path: 'breakout', loadChildren: '../breakout/breakout.module#BreakoutModule' },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponentComponent }
 ];
